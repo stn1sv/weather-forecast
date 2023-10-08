@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Прогноз погоды</title>
+</head>
+<body>
+<h1>Погода в {{ .City }}</h1>
+<table border="1">
+    <tr>
+        <th>Дата</th>
+        <th>Температура</th>
+    </tr>
+    {{ range .Forecasts }}
+    <tr>
+        <td>{{ .Date }}</td>
+        <td>{{ .Temperature }}</td>
+    </tr>
+    {{ end }}
+</table>
+</body>
+</html>
